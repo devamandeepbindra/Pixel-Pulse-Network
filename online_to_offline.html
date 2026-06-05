@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>O2O Commerce | Pixel Pulse Network</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#2d004f",
+                    "surface-container": "#eeeeee",
+                    "secondary-fixed": "#f1daff",
+                    "inverse-surface": "#2f3131",
+                    "on-primary-fixed-variant": "#00419e",
+                    "background": "#f9f9f9",
+                    "secondary": "#8333c6",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#bfbebe",
+                    "surface": "#f9f9f9",
+                    "tertiary-container": "#4d4d4d",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-primary-fixed": "#001946",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "surface-bright": "#f9f9f9",
+                    "primary": "#00327d",
+                    "primary-container": "#0047ab",
+                    "electric-blue": "#0047AB",
+                    "surface-variant": "#e2e2e2",
+                    "inverse-primary": "#b1c5ff",
+                    "slate-gray": "#4A4A4A",
+                    "surface-tint": "#2559bd",
+                    "on-background": "#1a1c1c",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-secondary-fixed-variant": "#690bac",
+                    "tertiary": "#363636",
+                    "secondary-fixed-dim": "#dfb7ff",
+                    "on-primary-container": "#a5bdff",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "on-secondary-container": "#41006f",
+                    "outline": "#737784",
+                    "on-surface-variant": "#434653",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e4e2e2",
+                    "on-secondary": "#ffffff",
+                    "pulse-purple": "#6A0DAD",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#b96cfd",
+                    "surface-container-highest": "#e2e2e2",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f3f3f4",
+                    "primary-fixed": "#dae2ff",
+                    "muted-silver": "#969696",
+                    "outline-variant": "#c3c6d5",
+                    "surface-charcoal": "#161616",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#b1c5ff",
+                    "on-surface": "#1a1c1c",
+                    "surface-dim": "#dadada"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "max-width": "1440px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #f9f9f9; color: #1a1c1c; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(150, 150, 150, 0.1); }
+        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
+        .hero-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(0, 50, 125, 0.05) 1px, transparent 0); background-size: 32px 32px; }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-surface-charcoal/80 backdrop-blur-md shadow-md dark:shadow-none docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed">
+                Pixel Pulse Network
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md text-slate-gray dark:text-muted-silver hover:text-pulse-purple transition-colors duration-300" href="#">Solutions</a>
+<a class="font-label-md text-label-md text-slate-gray dark:text-muted-silver hover:text-pulse-purple transition-colors duration-300" href="#">About Us</a>
+<a class="font-label-md text-label-md text-slate-gray dark:text-muted-silver hover:text-pulse-purple transition-colors duration-300" href="#">Success Stories</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed border-b-2 border-primary font-bold pb-1" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden lg:block px-6 py-2 border border-outline rounded-lg font-label-md text-label-md text-primary hover:bg-primary/5 transition-all">Schedule a Demo</button>
+<button class="px-6 py-2 bg-electric-blue text-white rounded-lg font-label-md text-label-md hover:bg-pulse-purple active:scale-95 transition-all duration-300">Get Started</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 hero-pattern">
+<div class="max-w-max-width mx-auto px-margin-desktop flex flex-col items-center text-center">
+<span class="font-label-caps text-label-caps text-pulse-purple bg-secondary-container/10 px-4 py-1 rounded-full mb-6">O2O Performance Engine</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6 tracking-tight max-w-4xl">Online to Offline Commerce</h1>
+<p class="font-body-lg text-body-lg text-slate-gray max-w-2xl mb-10 leading-relaxed">Bridging the gap between digital interaction and physical sales with high-precision location intelligence and real-time conversion attribution.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="px-8 py-4 bg-primary text-white rounded-xl font-headline-sm text-headline-sm flex items-center gap-2 hover:bg-pulse-purple shadow-lg shadow-electric-blue/20 transition-all duration-300">
+                        Drive Store Traffic
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-8 py-4 bg-white border border-outline-variant text-primary rounded-xl font-headline-sm text-headline-sm hover:border-primary transition-all">
+                        View Analytics Suite
+                    </button>
+</div>
+</div>
+<!-- Abstract Visual -->
+<div class="mt-20 max-w-5xl mx-auto px-margin-desktop relative">
+<div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+<img class="w-full h-full object-cover" data-alt="A sophisticated data dashboard showing high-tech mapping and urban traffic flow in a minimalist interface. The visualization uses a palette of electric blue and pulse purple to highlight pedestrian density and store proximity alerts. The lighting is clean and professional, emphasizing a modern corporate office environment with glass reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhl3aVT8Via0jb1u-ilej-7Eg_-T0JzcPRhjp75hJ4EzTXblH7r3M0lO6_xgNk_eaB6FwUvP5od7HvoFfy0c_SvU-0WX1JxFEzTW6I-i_AqF10lP0sCm5RY23qTmKYkco30DBBvHuQkKhCRWJAVfbwf9v82rO7u806F-dS-NIQMgoPJfp7shLdJWL4mV0nS290z0zxFhc3JMQqg2FRrzLboFRTrp-4yIrE76gWCh9gnUiJXjVw_cj_-2gZSG_9aOMrxh7OQO4Lqg"/>
+</div>
+<!-- Floating Data Chips -->
+<div class="absolute -top-6 -right-6 glass-card p-4 rounded-xl shadow-xl flex items-center gap-3 animate-bounce shadow-electric-blue/10">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-slate-gray">Active Campaign</p>
+<p class="font-headline-sm text-headline-sm text-primary">NY Flagship: +24%</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Features Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="font-display-lg text-headline-md text-primary mb-4">Architected for Conversion</h2>
+<p class="font-body-md text-body-md text-slate-gray">Drive foot traffic and measure the real-world impact of your digital ads with precision-engineered O2O technology.</p>
+</div>
+<div class="flex gap-2 pb-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="w-2 h-2 rounded-full bg-primary/30"></span>
+<span class="w-2 h-2 rounded-full bg-primary/10"></span>
+</div>
+</div>
+<div class="bento-grid">
+<!-- Geofencing -->
+<div class="col-span-12 md:col-span-7 bg-white p-8 rounded-3xl shadow-sm border border-outline/10 flex flex-col justify-between group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div>
+<div class="w-14 h-14 bg-electric-blue/10 rounded-2xl flex items-center justify-center text-electric-blue mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">radio</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Dynamic Geofencing</h3>
+<p class="font-body-md text-body-md text-slate-gray leading-relaxed max-w-md">Deploy high-accuracy virtual boundaries around retail locations to trigger personalized mobile engagement when high-intent customers are nearby.</p>
+</div>
+<div class="mt-12 rounded-2xl overflow-hidden h-48">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A clean top-down architectural map of a metropolitan city center with neon blue glowing circles representing geofenced zones. The visual is minimal, using a light gray map base with electric blue highlights for data points. The mood is precise and data-driven, fitting a corporate tech identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsAT275c_gCm2FTmPMK8oFFgEMoqMox3U53x_ZMgJKYcwq3YRV7ELRssJa83hkswwvmvXvakAKWzhai1qIZXoXq1aiLQL1fo7tvCIuWjkRGwh8EV3E_SmpjVnIOfsv4EgRzyIvQj5cUGH8vaPTS0kLgsDMsZ0pTCN9fl0ulMi7QtQymEY-Xzn90aHMFsfHOBRmsiHpFnWm-caIMvk-NKV1yuWelAMOsrs9SWKlcsNvc5QX5B4t6-0k0oCBBOypA-fZ-54EsMXYEw"/>
+</div>
+</div>
+<!-- Offline Tracking -->
+<div class="col-span-12 md:col-span-5 bg-primary p-8 rounded-3xl shadow-xl flex flex-col justify-between text-white overflow-hidden relative group">
+<div class="relative z-10">
+<div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-white mb-8">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Offline Conversion Tracking</h3>
+<p class="font-body-sm text-body-sm text-white/80 leading-relaxed">Close the attribution loop by matching digital ad impressions to physical store visits using secure, privacy-compliant hashed data matching.</p>
+</div>
+<div class="mt-8 relative z-10 bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/20">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-label-caps opacity-70">Footfall Accuracy</span>
+<span class="text-xs font-bold">98.4%</span>
+</div>
+<div class="w-full bg-white/20 h-1.5 rounded-full">
+<div class="bg-white h-full rounded-full w-[98%]"></div>
+</div>
+</div>
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-pulse-purple rounded-full blur-3xl opacity-30 group-hover:opacity-60 transition-opacity"></div>
+</div>
+<!-- Drive-to-Store -->
+<div class="col-span-12 md:col-span-4 bg-white p-8 rounded-3xl shadow-sm border border-outline/10 group hover:border-pulse-purple/30 transition-all">
+<div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Drive-to-Store Campaigns</h3>
+<p class="font-body-sm text-body-sm text-slate-gray">Optimize creative delivery based on travel time and traffic patterns to ensure your message hits when the visit is most likely.</p>
+</div>
+<!-- Localized Ads -->
+<div class="col-span-12 md:col-span-4 bg-white p-8 rounded-3xl shadow-sm border border-outline/10 group hover:border-pulse-purple/30 transition-all">
+<div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined">map</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Localized Ad Delivery</h3>
+<p class="font-body-sm text-body-sm text-slate-gray">Auto-generate dynamic creative localized for every store branch, including distance overlays and unique branch offers.</p>
+</div>
+<!-- Real-time sync -->
+<div class="col-span-12 md:col-span-4 bg-white p-8 rounded-3xl shadow-sm border border-outline/10 group hover:border-pulse-purple/30 transition-all">
+<div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined">sync_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Inventory Sync</h3>
+<p class="font-body-sm text-body-sm text-slate-gray">Link your digital ads to real-time local inventory. Only promote products that are currently in stock at the closest branch.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats / Proof Section -->
+<section class="py-20 bg-white">
+<div class="max-w-max-width mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter text-center">
+<div class="p-10 border-r border-outline/10 last:border-0">
+<p class="font-display-lg text-display-lg text-primary mb-2">35%</p>
+<p class="font-label-caps text-label-caps text-slate-gray uppercase tracking-widest">Average ROAS Increase</p>
+</div>
+<div class="p-10 border-r border-outline/10 last:border-0">
+<p class="font-display-lg text-display-lg text-pulse-purple mb-2">10M+</p>
+<p class="font-label-caps text-label-caps text-slate-gray uppercase tracking-widest">Store Visits Tracked</p>
+</div>
+<div class="p-10">
+<p class="font-display-lg text-display-lg text-primary mb-2">2.4x</p>
+<p class="font-label-caps text-label-caps text-slate-gray uppercase tracking-widest">Higher In-Store LTV</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-max-width mx-auto bg-surface-charcoal rounded-[40px] p-12 md:p-20 text-center overflow-hidden relative">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-0 left-0 w-96 h-96 bg-primary rounded-full blur-[120px]"></div>
+<div class="absolute bottom-0 right-0 w-96 h-96 bg-pulse-purple rounded-full blur-[120px]"></div>
+</div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-headline-md text-white mb-6">Ready to Bridge the Gap?</h2>
+<p class="font-body-lg text-body-lg text-muted-silver max-w-2xl mx-auto mb-12">Start measuring the real-world impact of your digital advertising spend today. Our team of specialists is ready to design your O2O strategy.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="px-10 py-5 bg-electric-blue text-white rounded-2xl font-headline-sm text-headline-sm hover:bg-white hover:text-surface-charcoal transition-all duration-300">Drive Store Traffic</button>
+<button class="px-10 py-5 border border-white/20 text-white rounded-2xl font-headline-sm text-headline-sm hover:bg-white/10 transition-all">Speak to an Agent</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-charcoal border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-max-width mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-display-lg text-headline-sm font-bold text-primary dark:text-primary-fixed mb-6">Pixel Pulse</div>
+<p class="font-body-sm text-body-sm text-slate-gray dark:text-muted-silver mb-8 leading-relaxed">
+                    Advanced programmatic solutions for the modern enterprise. Driving growth through precision data.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="font-label-caps text-label-caps text-primary dark:text-primary-fixed">Solutions</span>
+<a class="font-body-sm text-body-sm text-slate-gray dark:text-muted-silver hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Programmatic DSP</a>
+<a class="font-body-sm text-body-sm text-slate-gray dark:text-muted-silver hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Agentic AI</a>
+<a class="font-body-sm text-body-sm text-slate-gray dark:text-muted-silver hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Audience Discovery</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="font-label-caps text-label-caps text-primary dark:text-primary-fixed">Platform</span>
+<a class="font-body-sm text-body-sm text-slate-gray dark:text-muted-silver hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Affiliate Network</a>
+<a class="font-body-sm text-body-sm text-primary dark:text-primary-fixed font-semibold hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">O2O Commerce</a>
+<a class="font-body-sm text-body-sm text-slate-gray dark:text-muted-silver hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Success Stories</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="font-label-caps text-label-caps text-primary dark:text-primary-fixed">Legal</span>
+<a class="font-body-sm text-body-sm text-slate-gray dark:text-muted-silver hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-slate-gray dark:text-muted-silver hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-desktop py-6 border-t border-outline/10 text-center">
+<p class="font-body-sm text-body-sm text-slate-gray dark:text-muted-silver">© 2024 Pixel Pulse Network. All rights reserved.</p>
+</div>
+</footer>
+<!-- FAB Suppression Logic: Not primary screen or subpage focused -->
+<script>
+        // Micro-interaction for smooth scrolling and button ripples
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', function() {
+                this.style.transform = 'scale(0.96)';
+            });
+            button.addEventListener('mouseup', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+        
+        // Simple parallax effect for hero patterns
+        window.addEventListener('scroll', function() {
+            const pattern = document.querySelector('.hero-pattern');
+            let offset = window.pageYOffset;
+            pattern.style.backgroundPositionY = offset * 0.1 + 'px';
+        });
+    </script>
+</body></html>

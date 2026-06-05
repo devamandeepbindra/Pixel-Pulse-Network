@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Programmatic Full Stack DSP | Pixel Pulse Network</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#2d004f",
+                    "surface-container": "#eeeeee",
+                    "secondary-fixed": "#f1daff",
+                    "inverse-surface": "#2f3131",
+                    "on-primary-fixed-variant": "#00419e",
+                    "background": "#f9f9f9",
+                    "secondary": "#8333c6",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#bfbebe",
+                    "surface": "#f9f9f9",
+                    "tertiary-container": "#4d4d4d",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-primary-fixed": "#001946",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "surface-bright": "#f9f9f9",
+                    "primary": "#00327d",
+                    "primary-container": "#0047ab",
+                    "electric-blue": "#0047AB",
+                    "surface-variant": "#e2e2e2",
+                    "inverse-primary": "#b1c5ff",
+                    "slate-gray": "#4A4A4A",
+                    "surface-tint": "#2559bd",
+                    "on-background": "#1a1c1c",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-secondary-fixed-variant": "#690bac",
+                    "tertiary": "#363636",
+                    "secondary-fixed-dim": "#dfb7ff",
+                    "on-primary-container": "#a5bdff",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "on-secondary-container": "#41006f",
+                    "outline": "#737784",
+                    "on-surface-variant": "#434653",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e4e2e2",
+                    "on-secondary": "#ffffff",
+                    "pulse-purple": "#6A0DAD",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#b96cfd",
+                    "surface-container-highest": "#e2e2e2",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f3f3f4",
+                    "primary-fixed": "#dae2ff",
+                    "muted-silver": "#969696",
+                    "outline-variant": "#c3c6d5",
+                    "surface-charcoal": "#161616",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#b1c5ff",
+                    "on-surface": "#1a1c1c",
+                    "surface-dim": "#dadada"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "max-width": "1440px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(150, 150, 150, 0.2);
+        }
+        .pulse-hover:hover {
+            box-shadow: 0 4px 15px rgba(0, 71, 171, 0.12);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-md shadow-md sticky top-0 z-50 docked full-width">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-display-lg text-headline-md font-bold text-primary">Pixel Pulse Network</span>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary font-bold pb-1 hover:text-pulse-purple transition-colors duration-300" href="#">Solutions</a>
+<a class="font-label-md text-label-md text-slate-gray hover:text-primary transition-colors duration-300" href="#">About Us</a>
+<a class="font-label-md text-label-md text-slate-gray hover:text-primary transition-colors duration-300" href="#">Success Stories</a>
+<a class="font-label-md text-label-md text-slate-gray hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-primary font-label-md text-label-md hover:text-pulse-purple transition-colors">Schedule a Demo</button>
+<button class="bg-primary hover:bg-pulse-purple text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md transition-all active:scale-95 duration-150 ease-in-out shadow-sm">Get Started</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 overflow-hidden px-margin-desktop max-w-max-width mx-auto">
+<div class="grid lg:grid-cols-2 gap-gutter items-center">
+<div class="z-10">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">ADVERTISING TECHNOLOGY</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6 leading-tight">Programmatic Full Stack DSP</h1>
+<p class="font-body-lg text-body-lg text-slate-gray mb-10 max-w-xl">Precision targeting and automated ad buying at scale. Maximize your digital footprint with real-time bidding and AI-driven placement logic.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-electric-blue hover:bg-pulse-purple text-on-primary px-8 py-4 rounded-xl font-label-md text-label-md transition-all shadow-lg flex items-center gap-2">
+                            Request a Demo
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="border border-outline-variant hover:bg-surface-variant text-slate-gray px-8 py-4 rounded-xl font-label-md text-label-md transition-all">
+                            View Platform Specs
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-12 -left-12 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl"></div>
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border border-outline/10">
+<img alt="DSP Dashboard Preview" class="w-full h-auto object-cover" data-alt="A professional enterprise software interface displaying complex real-time data visualizations and performance graphs. The aesthetic is clean and modern, featuring high-contrast blue and purple accents against a pristine white background. Subtle glowing elements suggest live processing and high-tech digital advertising operations in a sophisticated corporate environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB08LA0qrfsLuCdhdolyn9M762A_1rlDEB7rcPZ9rTvIBy165vGh5mP9Vm_MoUCWgm0O2_-oTENal1Ttimtsoq2exG2nz3p5rF3gGwQDldtQXKXVDH_inUMvh-BjnmMZM0EKbeHShmW1o1xPzzQ_2U6WTrU9XQkeY3Nt9mZWiWVgqaDfst5e6lWJPYaC3GdElKZ-_uZTxLIUww4XqC64O-LarSIT2GasJAyUlKIDJvpJk3X78PtfE2Sr3jElV1wVY9nMQPlP7-L4w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="py-24 bg-surface-container-low px-margin-desktop">
+<div class="max-w-max-width mx-auto">
+<div class="mb-16 text-center max-w-2xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Powerful Features for Modern Advertisers</h2>
+<p class="font-body-md text-body-md text-slate-gray">Our full-stack solution integrates every aspect of the programmatic ecosystem into a single, intuitive control plane.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Feature 1: RTB -->
+<div class="md:col-span-8 glass-card p-8 rounded-xl pulse-hover flex flex-col justify-between min-h-[320px]">
+<div>
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Real-time Bidding (RTB)</h3>
+<p class="font-body-md text-body-md text-slate-gray">Bid on premium inventory across the web in milliseconds. Our low-latency infrastructure ensures you never miss a high-value impression, utilizing advanced algorithms to calculate the optimal bid for every unique user session.</p>
+</div>
+<div class="mt-8 flex gap-4">
+<span class="bg-primary/5 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Low Latency</span>
+<span class="bg-primary/5 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Global Reach</span>
+</div>
+</div>
+<!-- Feature 2: Analytics -->
+<div class="md:col-span-4 bg-primary text-on-primary p-8 rounded-xl pulse-hover flex flex-col">
+<div class="w-12 h-12 bg-on-primary/20 rounded-lg flex items-center justify-center text-on-primary mb-6">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Advanced Analytics</h3>
+<p class="font-body-sm text-body-sm opacity-90 flex-grow">Deep-dive into performance with granular reporting. Track viewability, conversion paths, and attribution with precision.</p>
+<div class="pt-6 border-t border-on-primary/20 mt-6">
+<div class="flex items-end gap-1">
+<div class="w-2 bg-on-primary/40 h-8 rounded-t"></div>
+<div class="w-2 bg-on-primary/70 h-12 rounded-t"></div>
+<div class="w-2 bg-on-primary/90 h-16 rounded-t"></div>
+<div class="w-2 bg-on-primary h-10 rounded-t"></div>
+<div class="w-2 bg-on-primary/60 h-14 rounded-t"></div>
+</div>
+</div>
+</div>
+<!-- Feature 3: Integration -->
+<div class="md:col-span-4 glass-card p-8 rounded-xl pulse-hover">
+<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Cross-channel</h3>
+<p class="font-body-sm text-body-sm text-slate-gray leading-relaxed">Unified campaigns across Mobile, Web, Video, and Connected TV (CTV) from one dashboard.</p>
+</div>
+<!-- Feature 4: Automation -->
+<div class="md:col-span-8 glass-card p-8 rounded-xl pulse-hover flex items-center gap-8 overflow-hidden">
+<div class="flex-grow">
+<div class="w-12 h-12 bg-pulse-purple/10 rounded-lg flex items-center justify-center text-pulse-purple mb-6">
+<span class="material-symbols-outlined">auto_fix_high</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Automated Optimization</h3>
+<p class="font-body-md text-body-md text-slate-gray">Let Agentic AI handle the heavy lifting. Our system automatically reallocates budget to high-performing segments in real-time.</p>
+</div>
+<div class="hidden lg:block w-1/3 -mr-12 opacity-20">
+<span class="material-symbols-outlined text-[160px]" style="font-variation-settings: 'FILL' 1;">neurology</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="py-24 px-margin-desktop bg-surface">
+<div class="max-w-max-width mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2">
+<h2 class="font-display-lg text-headline-md text-primary mb-8">Efficiency Meets Scale</h2>
+<ul class="space-y-8">
+<li class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Increased ROI</h4>
+<p class="font-body-sm text-body-sm text-slate-gray">Reduce wasted ad spend by targeting only the users that matter most to your brand.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined">timer_off</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Reduced Manual Overhead</h4>
+<p class="font-body-sm text-body-sm text-slate-gray">Automate bid adjustments and creative rotations to free up your team for strategy.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+<span class="material-symbols-outlined">public</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Wider Reach</h4>
+<p class="font-body-sm text-body-sm text-slate-gray">Access 99% of the world's available digital ad inventory through a single portal.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="bg-surface-container-high rounded-xl p-6 shadow-sm border border-outline/5">
+<div class="text-primary font-bold text-3xl mb-1">45%</div>
+<div class="text-label-caps font-label-caps text-slate-gray">Avg. ROI Boost</div>
+</div>
+<div class="bg-electric-blue rounded-xl p-6 shadow-md text-on-primary">
+<div class="font-bold text-3xl mb-1">10B+</div>
+<div class="text-label-caps font-label-caps opacity-80">Daily Bids</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-pulse-purple rounded-xl p-6 shadow-md text-on-primary">
+<div class="font-bold text-3xl mb-1">200+</div>
+<div class="text-label-caps font-label-caps opacity-80">SSPs Integrated</div>
+</div>
+<div class="bg-surface-container-high rounded-xl p-6 shadow-sm border border-outline/5">
+<div class="text-primary font-bold text-3xl mb-1">&lt;10ms</div>
+<div class="text-label-caps font-label-caps text-slate-gray">Decision Time</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Study Snippet -->
+<section class="py-24 bg-surface-charcoal text-white overflow-hidden relative">
+<div class="max-w-max-width mx-auto px-margin-desktop relative z-10">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-1/3">
+<span class="font-label-caps text-label-caps text-primary-fixed mb-4 block">SUCCESS STORY</span>
+<h2 class="font-display-lg text-headline-md mb-6 leading-tight">Global Retailer Achieves 3x Lift</h2>
+<p class="font-body-md text-body-md text-muted-silver mb-8">How one Fortune 500 company moved from siloed ad buying to our Full Stack DSP, reducing CPA by 40% while doubling reach.</p>
+<a class="text-primary-fixed font-semibold flex items-center gap-2 group hover:underline underline-offset-4" href="#">
+                            Read the full study
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="lg:w-2/3 glass-card bg-white/5 border-white/10 rounded-2xl p-8 flex gap-8">
+<img alt="Case Study Team" class="w-48 h-48 rounded-xl object-cover hidden md:block" data-alt="A focused digital marketing team working together in a sleek, high-tech workspace with multiple large monitors showing data analytics and programmatic advertising dashboards. The lighting is moody and professional, with cool blue tones and a sense of high-performance collaboration. Professional corporate atmosphere with cutting-edge technology integration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkmrKm4t7CZMCsUeNX9X5mYtDQxyoYrbuQoZbhquhu5yTswKY6Jw6bTc3sKKm6DhASsAIyWOZRxdGW_S9eI-ktYizpV6mNwGHrU5cQM1VZVAOG9I_VYUa_1Wfco12SEOhqBGh3lVYyf-BSCm9d785gtO-a-v1FVM8UxIuqojBASQnJsptFx0AYnm7KJl-LGTdj8T7qZhm1QwF3pOlIs1l1gAe_HOGgKbt1laQ1oYqNmHz2Z2cc_jyn_a3tCqLP_GCkKPWlPWo5Gg"/>
+<div>
+<div class="flex items-center gap-1 text-primary-fixed mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic font-body-lg text-body-lg mb-4">"The Pixel Pulse DSP transformed our digital strategy. The automation alone saved us 20 hours a week in manual bid management."</p>
+<p class="font-label-md text-label-md text-muted-silver">— Marketing Director, Global Apparel Brand</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative pulses -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/5 rounded-full animate-ping opacity-20 pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-white/10 rounded-full animate-pulse opacity-20 pointer-events-none"></div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-4xl mx-auto text-center bg-primary-container rounded-3xl p-12 lg:p-20 text-on-primary relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Ready to scale your reach?</h2>
+<p class="font-body-lg text-body-lg mb-10 opacity-90 max-w-2xl mx-auto">Join leading agencies and brands leveraging our Full Stack DSP to dominate their market niches.</p>
+<button class="bg-white text-primary hover:bg-surface-container-low px-10 py-5 rounded-xl font-headline-sm text-headline-sm transition-all shadow-xl active:scale-95">
+                        Request a Demo
+                    </button>
+</div>
+<!-- Abstract BG patterns -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-3xl -mr-32 -mt-32 rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-container/20 blur-3xl -ml-32 -mb-32 rounded-full"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-charcoal border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-max-width mx-auto">
+<div class="md:col-span-1">
+<span class="font-display-lg text-headline-sm font-bold text-primary dark:text-primary-fixed block mb-6">Pixel Pulse Network</span>
+<p class="font-body-sm text-body-sm text-slate-gray mb-6">The future of programmatic advertising, powered by agentic intelligence and precision data.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-6">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Programmatic DSP</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Agentic AI</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Audience Discovery</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-6">Network</h4>
+<ul class="space-y-4">
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Affiliate Network</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">O2O Commerce</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Success Stories</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop py-6 max-w-max-width mx-auto border-t border-outline/10 text-center">
+<p class="font-body-sm text-body-sm text-muted-silver">© 2024 Pixel Pulse Network. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions and subtle scroll reveals
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.glass-card').forEach(card => {
+                card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(card);
+            });
+        });
+    </script>
+</body></html>

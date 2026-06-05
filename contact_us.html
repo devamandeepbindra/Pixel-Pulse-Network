@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Pixel Pulse Network</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#2d004f",
+                    "surface-container": "#eeeeee",
+                    "secondary-fixed": "#f1daff",
+                    "inverse-surface": "#2f3131",
+                    "on-primary-fixed-variant": "#00419e",
+                    "background": "#f9f9f9",
+                    "secondary": "#8333c6",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#bfbebe",
+                    "surface": "#f9f9f9",
+                    "tertiary-container": "#4d4d4d",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-primary-fixed": "#001946",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "surface-bright": "#f9f9f9",
+                    "primary": "#00327d",
+                    "primary-container": "#0047ab",
+                    "electric-blue": "#0047AB",
+                    "surface-variant": "#e2e2e2",
+                    "inverse-primary": "#b1c5ff",
+                    "slate-gray": "#4A4A4A",
+                    "surface-tint": "#2559bd",
+                    "on-background": "#1a1c1c",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-secondary-fixed-variant": "#690bac",
+                    "tertiary": "#363636",
+                    "secondary-fixed-dim": "#dfb7ff",
+                    "on-primary-container": "#a5bdff",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "on-secondary-container": "#41006f",
+                    "outline": "#737784",
+                    "on-surface-variant": "#434653",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e4e2e2",
+                    "on-secondary": "#ffffff",
+                    "pulse-purple": "#6A0DAD",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#b96cfd",
+                    "surface-container-highest": "#e2e2e2",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f3f3f4",
+                    "primary-fixed": "#dae2ff",
+                    "muted-silver": "#969696",
+                    "outline-variant": "#c3c6d5",
+                    "surface-charcoal": "#161616",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#b1c5ff",
+                    "on-surface": "#1a1c1c",
+                    "surface-dim": "#dadada"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "max-width": "1440px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px -10px rgba(0, 71, 171, 0.12);
+        }
+        .form-input-focus:focus {
+            outline: none;
+            border-color: #6A0DAD;
+            box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-white">
+<!-- TopNavBar Navigation Shell -->
+<nav class="bg-surface/80 backdrop-blur-md shadow-md docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="font-display-lg text-headline-md font-bold text-primary">Pixel Pulse Network</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-gray hover:text-pulse-purple transition-colors duration-300 font-label-md text-label-md" href="#">Solutions</a>
+<a class="text-slate-gray hover:text-pulse-purple transition-colors duration-300 font-label-md text-label-md" href="#">About Us</a>
+<a class="text-slate-gray hover:text-pulse-purple transition-colors duration-300 font-label-md text-label-md" href="#">Success Stories</a>
+<a class="text-primary border-b-2 border-primary font-bold pb-1 font-label-md text-label-md" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<button class="hidden lg:block px-6 py-2 border border-outline/20 rounded-lg font-label-md text-label-md text-slate-gray hover:bg-surface-container transition-all active:scale-95">Schedule a Demo</button>
+<button class="px-6 py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-pulse-purple transition-all active:scale-95 shadow-lg shadow-primary/20">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="max-w-max-width mx-auto px-margin-desktop py-16">
+<!-- Hero Section -->
+<header class="mb-16 max-w-2xl">
+<h1 class="font-display-lg text-display-lg text-primary mb-4 leading-tight">Drop us a line!</h1>
+<p class="font-body-lg text-body-lg text-slate-gray">Connect with our team of precision advertising experts. Whether you're interested in AI audience discovery or programmatic DSP solutions, we're ready to accelerate your growth.</p>
+</header>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Contact Form Area (Bento Main Column) -->
+<div class="lg:col-span-7 bg-white p-10 rounded-xl shadow-md border border-outline/10">
+<form class="space-y-6" id="contact-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-slate-gray" for="name">Full Name</label>
+<input class="p-3 border border-outline/20 rounded-lg form-input-focus font-body-sm text-on-surface" id="name" name="name" placeholder="John Doe" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-slate-gray" for="email">Work Email</label>
+<input class="p-3 border border-outline/20 rounded-lg form-input-focus font-body-sm text-on-surface" id="email" name="email" placeholder="john@company.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-slate-gray" for="phone">Phone (Optional)</label>
+<input class="p-3 border border-outline/20 rounded-lg form-input-focus font-body-sm text-on-surface" id="phone" name="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-slate-gray" for="company">Company</label>
+<input class="p-3 border border-outline/20 rounded-lg form-input-focus font-body-sm text-on-surface" id="company" name="company" placeholder="Agency Inc." type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-slate-gray" for="message">Message</label>
+<textarea class="p-3 border border-outline/20 rounded-lg form-input-focus font-body-sm text-on-surface resize-none" id="message" name="message" placeholder="Tell us about your project or goals..." rows="5"></textarea>
+</div>
+<div class="flex items-center gap-3 py-2">
+<input class="w-5 h-5 text-pulse-purple border-outline/20 rounded focus:ring-pulse-purple/20" id="email_list" name="email_list" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-slate-gray select-none" for="email_list">Sign up for email list and receive the latest insights on Agentic AI advertising.</label>
+</div>
+<div class="pt-4 border-t border-outline/10">
+<p class="font-label-md text-[11px] text-muted-silver leading-relaxed mb-6">
+                            This site is protected by reCAPTCHA and the Google 
+                            <a class="text-primary hover:underline" href="#">Privacy Policy</a> and 
+                            <a class="text-primary hover:underline" href="#">Terms of Service</a> apply.
+                        </p>
+<button class="w-full md:w-auto px-10 py-4 bg-primary text-on-primary rounded-lg font-label-md text-headline-sm hover:bg-pulse-purple transition-all active:scale-95 shadow-lg shadow-primary/20 flex items-center justify-center gap-2" type="submit">
+                            Send Message
+                            <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Side Info Cluster (Bento Secondary Columns) -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<!-- Contact Details Card -->
+<div class="bento-card bg-surface-container-low p-8 rounded-xl border border-outline/10 flex-grow">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Contact Details</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-muted-silver mb-1">EMAIL US</p>
+<p class="font-body-md text-body-md text-on-surface font-semibold">hello@pixelpulse.network</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-muted-silver mb-1">VISIT US</p>
+<p class="font-body-md text-body-md text-on-surface font-semibold">
+                                    One World Trade Center, 85th Floor<br/>
+                                    New York, NY 10007, USA
+                                </p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-muted-silver mb-1">PARTNERSHIPS</p>
+<p class="font-body-md text-body-md text-on-surface font-semibold">partners@pixelpulse.network</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Placeholder Card -->
+<div class="bento-card relative h-72 rounded-xl overflow-hidden border border-outline/10 group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A stylized, clean architectural map of Lower Manhattan featuring the Financial District and World Trade Center area. The map is rendered in a minimalist blue and white color scheme, consistent with a high-tech corporate identity. Soft ambient light illuminates the geometric street grids, conveying a sense of order, precision, and global connectivity. The perspective is a top-down aerial view with a professional, data-driven aesthetic." data-location="New York City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbq2PQv8WbQmtRy19r7v6f28WNhrA_6tOFmQMciB0XGVr8Segx7HEGT6PoANtqvMjJSP7HwIkHpGpo7veExDEGvksl7tRmmu3Zb7bvOVAWJHZRFTE6F2s1dPp00dBGN_z3vBQWwWsukoN0cqvxyZonqQOJ9vNV5BZqZDY01LHw_vOXcZ3qQk6C0u2o-1B7rYd4EiHSKun--Jigb7GSEvC0v6xYj0ybUbxDZVy4q_P4uQ78qHp5oJomhFMjvtEq5O67LBJJk_SU8w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-6">
+<div class="bg-white/90 backdrop-blur px-4 py-2 rounded-lg shadow-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-md text-label-md text-primary font-bold">New York HQ</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-max-width mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-display-lg text-headline-sm font-bold text-primary mb-4">Pixel Pulse Network</div>
+<p class="font-body-sm text-body-sm text-slate-gray mb-6">Empowering brands with autonomous ad-tech and real-time audience intelligence.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-4">SOLUTIONS</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Programmatic DSP</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Agentic AI</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Audience Discovery</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-4">NETWORK</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Affiliate Network</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">O2O Commerce</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Success Stories</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-4">LEGAL</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue transition-all hover:underline decoration-pulse-purple" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-desktop pb-8 text-center md:text-left">
+<p class="font-body-sm text-body-sm text-muted-silver">© 2024 Pixel Pulse Network. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalHtml = btn.innerHTML;
+            
+            btn.innerHTML = `<span class="material-symbols-outlined animate-spin">sync</span> Sending...`;
+            btn.disabled = true;
+            btn.classList.add('opacity-70', 'cursor-not-allowed');
+
+            setTimeout(() => {
+                btn.innerHTML = `<span class="material-symbols-outlined">check_circle</span> Message Sent`;
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-green-600');
+                
+                // Optional: reset after some time
+                setTimeout(() => {
+                    btn.innerHTML = originalHtml;
+                    btn.disabled = false;
+                    btn.classList.remove('bg-green-600', 'opacity-70', 'cursor-not-allowed');
+                    btn.classList.add('bg-primary');
+                    this.reset();
+                }, 3000);
+            }, 1500);
+        });
+
+        // Add subtle hover effect to cards using JavaScript for depth variation
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Success Stories | Pixel Pulse Network</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(150, 150, 150, 0.2);
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 30s linear infinite;
+        }
+        .chart-pulse {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 3s ease-in-out forwards;
+        }
+        @keyframes dash {
+            to { stroke-dashoffset: 0; }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#2d004f",
+                        "surface-container": "#eeeeee",
+                        "secondary-fixed": "#f1daff",
+                        "inverse-surface": "#2f3131",
+                        "on-primary-fixed-variant": "#00419e",
+                        "background": "#f9f9f9",
+                        "secondary": "#8333c6",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#bfbebe",
+                        "surface": "#f9f9f9",
+                        "tertiary-container": "#4d4d4d",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-primary-fixed": "#001946",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "surface-bright": "#f9f9f9",
+                        "primary": "#00327d",
+                        "primary-container": "#0047ab",
+                        "electric-blue": "#0047AB",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-primary": "#b1c5ff",
+                        "slate-gray": "#4A4A4A",
+                        "surface-tint": "#2559bd",
+                        "on-background": "#1a1c1c",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary-fixed-variant": "#690bac",
+                        "tertiary": "#363636",
+                        "secondary-fixed-dim": "#dfb7ff",
+                        "on-primary-container": "#a5bdff",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-secondary-container": "#41006f",
+                        "outline": "#737784",
+                        "on-surface-variant": "#434653",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e4e2e2",
+                        "on-secondary": "#ffffff",
+                        "pulse-purple": "#6A0DAD",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#b96cfd",
+                        "surface-container-highest": "#e2e2e2",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f3f3f4",
+                        "primary-fixed": "#dae2ff",
+                        "muted-silver": "#969696",
+                        "outline-variant": "#c3c6d5",
+                        "surface-charcoal": "#161616",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed-dim": "#b1c5ff",
+                        "on-surface": "#1a1c1c",
+                        "surface-dim": "#dadada"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "max-width": "1440px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-pulse-purple selection:text-white">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-surface-charcoal/80 backdrop-blur-md shadow-md dark:shadow-none docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed">
+                Pixel Pulse Network
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md text-slate-gray dark:text-muted-silver hover:text-pulse-purple transition-colors duration-300" href="#">Solutions</a>
+<a class="font-label-md text-label-md text-slate-gray dark:text-muted-silver hover:text-pulse-purple transition-colors duration-300" href="#">About Us</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed border-b-2 border-primary font-bold pb-1" href="#">Success Stories</a>
+<a class="font-label-md text-label-md text-slate-gray dark:text-muted-silver hover:text-pulse-purple transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden lg:block font-label-md text-label-md text-primary font-semibold hover:text-pulse-purple transition-all duration-300 px-4 py-2">Schedule a Demo</button>
+<button class="bg-electric-blue text-white font-label-md text-label-md px-6 py-2 rounded-lg hover:bg-pulse-purple active:scale-95 transition-all duration-150 shadow-md">Get Started</button>
+</div>
+</nav>
+</header>
+<main class="max-w-max-width mx-auto">
+<!-- Hero Section -->
+<section class="px-margin-desktop py-20 text-center relative overflow-hidden">
+<div class="relative z-10">
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Proven Results in the Digital Frontier</h1>
+<p class="font-body-lg text-body-lg text-slate-gray max-w-2xl mx-auto mb-12">We transform complex data into clear competitive advantages. Explore how our AI-driven strategies have redefined performance for global leaders.</p>
+</div>
+<div class="absolute inset-0 -z-0 opacity-5">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+</section>
+<!-- Client Logos Marquee -->
+<section class="py-12 bg-surface-container-low overflow-hidden border-y border-outline/10">
+<div class="px-margin-desktop mb-8 text-center">
+<span class="font-label-caps text-label-caps text-muted-silver uppercase tracking-widest">Trusted by Industry Innovators</span>
+</div>
+<div class="relative flex overflow-x-hidden">
+<div class="animate-marquee whitespace-nowrap flex items-center space-x-24">
+<div class="flex items-center space-x-2 text-slate-gray opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+<span class="material-symbols-outlined text-4xl">rocket_launch</span>
+<span class="font-headline-sm text-headline-sm">Velocity.io</span>
+</div>
+<div class="flex items-center space-x-2 text-slate-gray opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+<span class="material-symbols-outlined text-4xl">cloud_sync</span>
+<span class="font-headline-sm text-headline-sm">StratusCommerce</span>
+</div>
+<div class="flex items-center space-x-2 text-slate-gray opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+<span class="material-symbols-outlined text-4xl">payments</span>
+<span class="font-headline-sm text-headline-sm">FinFlow</span>
+</div>
+<div class="flex items-center space-x-2 text-slate-gray opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+<span class="material-symbols-outlined text-4xl">shield</span>
+<span class="font-headline-sm text-headline-sm">AegisTech</span>
+</div>
+<div class="flex items-center space-x-2 text-slate-gray opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+<span class="material-symbols-outlined text-4xl">shopping_bag</span>
+<span class="font-headline-sm text-headline-sm">LuxeMarket</span>
+</div>
+<div class="flex items-center space-x-2 text-slate-gray opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+<span class="material-symbols-outlined text-4xl">precision_manufacturing</span>
+<span class="font-headline-sm text-headline-sm">OptimaGen</span>
+</div>
+</div>
+<!-- Duplicate for seamless loop -->
+<div aria-hidden="true" class="animate-marquee whitespace-nowrap flex items-center space-x-24 ml-24">
+<div class="flex items-center space-x-2 text-slate-gray opacity-60 grayscale">
+<span class="material-symbols-outlined text-4xl">rocket_launch</span>
+<span class="font-headline-sm text-headline-sm">Velocity.io</span>
+</div>
+<div class="flex items-center space-x-2 text-slate-gray opacity-60 grayscale">
+<span class="material-symbols-outlined text-4xl">cloud_sync</span>
+<span class="font-headline-sm text-headline-sm">StratusCommerce</span>
+</div>
+<div class="flex items-center space-x-2 text-slate-gray opacity-60 grayscale">
+<span class="material-symbols-outlined text-4xl">payments</span>
+<span class="font-headline-sm text-headline-sm">FinFlow</span>
+</div>
+<div class="flex items-center space-x-2 text-slate-gray opacity-60 grayscale">
+<span class="material-symbols-outlined text-4xl">shield</span>
+<span class="font-headline-sm text-headline-sm">AegisTech</span>
+</div>
+<div class="flex items-center space-x-2 text-slate-gray opacity-60 grayscale">
+<span class="material-symbols-outlined text-4xl">shopping_bag</span>
+<span class="font-headline-sm text-headline-sm">LuxeMarket</span>
+</div>
+<div class="flex items-center space-x-2 text-slate-gray opacity-60 grayscale">
+<span class="material-symbols-outlined text-4xl">precision_manufacturing</span>
+<span class="font-headline-sm text-headline-sm">OptimaGen</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Studies Section -->
+<section class="px-margin-desktop py-24 space-y-32">
+<!-- Case Study 1: Velocity.io -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 space-y-6">
+<div class="inline-flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full font-label-md text-label-md">
+                        Programmatic DSP
+                    </div>
+<h2 class="font-display-lg text-headline-md lg:text-display-lg text-primary">Scale Beyond Limits: Velocity.io</h2>
+<div class="space-y-4">
+<div class="p-4 border-l-4 border-electric-blue bg-surface-container-low rounded-r-xl">
+<h4 class="font-label-caps text-label-caps text-electric-blue uppercase">Campaign Goal</h4>
+<p class="font-body-md text-body-md text-on-surface">Increase global ROI by 45% through high-frequency algorithmic bidding.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">The Challenge</h4>
+<p class="font-body-md text-body-md text-slate-gray">Velocity.io faced stagnating conversion rates in a saturated European market where manual bidding could no longer keep pace with real-time inventory fluctuation.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">The Solution</h4>
+<p class="font-body-md text-body-md text-slate-gray">Integration of our proprietary Programmatic DSP, leveraging real-time signal processing to identify and bid on high-intent user profiles across premium publisher networks.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="glass-card rounded-xl p-8 shadow-xl">
+<div class="flex justify-between items-end mb-8">
+<div>
+<p class="font-label-caps text-label-caps text-muted-silver mb-1">REAL-TIME PERFORMANCE</p>
+<h3 class="font-headline-md text-headline-md text-primary">+48.2% ROI Yield</h3>
+</div>
+<div class="flex space-x-4">
+<div class="text-right">
+<span class="block font-label-caps text-label-caps text-muted-silver">CTR</span>
+<span class="font-headline-sm text-headline-sm text-pulse-purple">3.4%</span>
+</div>
+<div class="text-right">
+<span class="block font-label-caps text-label-caps text-muted-silver">CONV.</span>
+<span class="font-headline-sm text-headline-sm text-electric-blue">12.8%</span>
+</div>
+</div>
+</div>
+<div class="h-64 w-full relative">
+<svg class="w-full h-full" viewbox="0 0 400 150">
+<path class="chart-pulse" d="M0,120 Q50,110 100,80 T200,60 T300,30 T400,10" fill="none" stroke="#0047AB" stroke-width="4"></path>
+<path d="M0,130 Q80,120 160,110 T320,95 T400,85" fill="none" stroke="#6A0DAD" stroke-dasharray="5 5" stroke-width="2"></path>
+</svg>
+<div class="absolute bottom-0 left-0 w-full h-px bg-outline/20"></div>
+</div>
+<img class="mt-8 rounded-lg w-full h-48 object-cover shadow-inner" data-alt="A futuristic UI dashboard showing advanced performance metrics for a digital advertising campaign. The screen features clean line charts in electric blue and vibrant purple against a minimal white background. Soft lighting and deep depth of field create a professional, high-tech atmosphere for a data-driven enterprise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpTTwkchMAwbC9UfD1CwRxqF4oDvcFawJ1jN9V4FuouMQX7zl1HEb3vA6u80sH_HLBBrXa14s4WvhXt9E6QQeWwLHxLtEndwG_sYFvxXPjZLgJ_dwSpJU6BM28nFgvD1QSa2HPCCtELOi5bZNwKKAAK7AAVQoBv4GAcVfsznPB606Sfkz9IYev7EU77b99ujbpuhci5-IWfm7nfvQjDQVHa6LBCGUGeuqbhxtbQIS36GkMInQju9XPy1EzT1yBbzDoTYZkfgQoDg"/>
+</div>
+</div>
+</div>
+<!-- Case Study 2: StratusCommerce -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 order-2 lg:order-1">
+<div class="grid grid-cols-2 gap-4">
+<div class="glass-card p-6 rounded-xl flex flex-col justify-between h-48">
+<span class="material-symbols-outlined text-pulse-purple text-4xl">group_add</span>
+<div>
+<p class="font-label-caps text-label-caps text-muted-silver">Audience Reach</p>
+<p class="font-display-lg text-headline-md">2.4M+</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl flex flex-col justify-between h-48 border-b-4 border-pulse-purple">
+<span class="material-symbols-outlined text-electric-blue text-4xl">bolt</span>
+<div>
+<p class="font-label-caps text-label-caps text-muted-silver">Conversion Rate</p>
+<p class="font-display-lg text-headline-md">x3.2</p>
+</div>
+</div>
+<div class="col-span-2 glass-card p-6 rounded-xl overflow-hidden relative">
+<div class="relative z-10">
+<p class="font-label-caps text-label-caps text-muted-silver mb-4">Ad Performance Matrix</p>
+<div class="flex space-x-1 items-end h-24">
+<div class="w-1/6 bg-electric-blue/20 h-1/3 rounded-t"></div>
+<div class="w-1/6 bg-electric-blue/40 h-1/2 rounded-t"></div>
+<div class="w-1/6 bg-electric-blue/60 h-2/3 rounded-t"></div>
+<div class="w-1/6 bg-electric-blue/80 h-3/4 rounded-t"></div>
+<div class="w-1/6 bg-electric-blue h-full rounded-t"></div>
+<div class="w-1/6 bg-pulse-purple h-full rounded-t animate-pulse"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 order-1 lg:order-2 space-y-6">
+<div class="inline-flex items-center px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-md text-label-md">
+                        Agentic AI
+                    </div>
+<h2 class="font-display-lg text-headline-md lg:text-display-lg text-primary">Autonomous Growth: StratusCommerce</h2>
+<div class="space-y-4">
+<div class="p-4 border-l-4 border-pulse-purple bg-surface-container-low rounded-r-xl">
+<h4 class="font-label-caps text-label-caps text-pulse-purple uppercase">Campaign Goal</h4>
+<p class="font-body-md text-body-md text-on-surface">Reduce customer acquisition cost (CAC) by 30% while maintaining lead volume.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">The Challenge</h4>
+<p class="font-body-md text-body-md text-slate-gray">StratusCommerce was struggling with creative fatigue and inefficient budget allocation across diverse social platforms.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">The Solution</h4>
+<p class="font-body-md text-body-md text-slate-gray">Deployment of our Agentic AI modules to autonomously generate creative iterations and shift budgets in real-time based on micro-trend analysis.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Case Study 3: LuxeMarket -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 space-y-6">
+<div class="inline-flex items-center px-3 py-1 bg-tertiary-container/10 text-tertiary-container rounded-full font-label-md text-label-md">
+                        O2O Commerce
+                    </div>
+<h2 class="font-display-lg text-headline-md lg:text-display-lg text-primary">Bridging the Gap: LuxeMarket</h2>
+<div class="space-y-4">
+<div class="p-4 border-l-4 border-tertiary bg-surface-container-low rounded-r-xl">
+<h4 class="font-label-caps text-label-caps text-tertiary uppercase">Campaign Goal</h4>
+<p class="font-body-md text-body-md text-on-surface">Drive foot traffic to 15 flagship locations with digital-to-physical attribution.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">The Challenge</h4>
+<p class="font-body-md text-body-md text-slate-gray">Disconnected data silos made it impossible to prove that digital ad spend was actually driving in-store luxury watch purchases.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">The Solution</h4>
+<p class="font-body-md text-body-md text-slate-gray">Our O2O Commerce bridge used geofencing and unique mobile identifiers to track the full customer journey from the first click to the final store entry.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="relative group">
+<img class="rounded-2xl shadow-2xl w-full h-[450px] object-cover" data-alt="A high-end luxury retail storefront with elegant minimalist architecture and large glass windows. The interior is softly lit with warm spotlights illuminating premium products. The scene captures a sophisticated atmosphere blending physical retail with digital connectivity, featuring clean lines and a professional corporate aesthetic in a bright daylight setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeIRvy-RaNTIUiZSJ3yfx7hN11QnrArNxOe4OC9FCR50_evPLjSdtgNQZCY0vcfW9Da8GSmPrMwxWze88Ir-UOckAieXcdV5S4XQEPs3zpCD9_heped0vcY8g8ZNchFvrFy2yC59Wj9OU3yMLJ5KzFc9FzKA_tEtcncpEHfyiuCm_taMMxBuEGeGEwThhgzQVqCufqXRmkP7kgSPyw-OcgfsP_ow285xOeYusHvZg4IlNkuIGiDZ2sHJ2HZpKPHSL1nsWIa03XnA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent rounded-2xl flex flex-col justify-end p-10 text-white">
+<div class="grid grid-cols-3 gap-8">
+<div>
+<p class="font-label-caps text-label-caps opacity-80">Store Visits</p>
+<p class="font-display-lg text-headline-md">+115%</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps opacity-80">Attributed Rev</p>
+<p class="font-display-lg text-headline-md">$4.2M</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps opacity-80">Reach</p>
+<p class="font-display-lg text-headline-md">850k</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-margin-desktop py-24">
+<div class="bg-primary rounded-3xl p-12 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-pulse-purple rounded-full blur-[120px] opacity-30 -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-electric-blue rounded-full blur-[120px] opacity-30 translate-y-1/2 -translate-x-1/2"></div>
+<div class="relative z-10 space-y-8">
+<h2 class="font-display-lg text-display-lg max-w-3xl mx-auto">Ready to be our next Success Story?</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed max-w-xl mx-auto opacity-90">Join the network that's redefining digital advertising through precision technology and agentic intelligence.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-white text-primary px-8 py-4 rounded-xl font-headline-sm text-headline-sm hover:bg-surface-container-highest transition-colors shadow-lg">Schedule Strategy Call</button>
+<button class="bg-primary-container text-white border border-white/20 px-8 py-4 rounded-xl font-headline-sm text-headline-sm hover:bg-white/10 transition-colors">Download Media Kit</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-charcoal border-t border-outline/20 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-max-width mx-auto">
+<div class="space-y-4">
+<div class="font-display-lg text-headline-sm font-bold text-primary dark:text-primary-fixed">
+                    Pixel Pulse Network
+                </div>
+<p class="font-body-sm text-body-sm text-slate-gray">Redefining the digital advertising landscape through data-driven innovation and precision minimalism.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed font-semibold">Solutions</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Programmatic DSP</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Agentic AI</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Audience Discovery</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed font-semibold">Network</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Affiliate Network</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">O2O Commerce</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Success Stories</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed font-semibold">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-body-sm text-slate-gray hover:text-electric-blue dark:hover:text-primary-fixed-dim hover:underline decoration-pulse-purple transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop py-6 border-t border-outline/10 text-center">
+<p class="font-body-sm text-body-sm text-muted-silver">© 2024 Pixel Pulse Network. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Smooth reveal on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
